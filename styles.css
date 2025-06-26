@@ -73,7 +73,8 @@ body {
       }
 
       & h1 {
-        font-weight: 300;
+        z-index: 0;
+        font-weight: 400;
         font-size: 1.3rem;
       }
     }
@@ -83,11 +84,15 @@ body {
     display: flex;
     height: 35%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 2rem;
 
-    & h5 {
+    & button {
       color: var(--Purple-500);
       font-weight: 500;
+      background-color: var(--Navy-900);
+      border: none; 
+      font-size: .8rem;
     }
   }
 }
@@ -100,7 +105,7 @@ body {
   overflow: hidden;
   z-index: 0;
 
-  & img {
+  & .category-icon {
     position: absolute;
     top: -0.5rem;
     right: 1rem;
@@ -110,11 +115,39 @@ body {
 
 .details {
   background-color: var(--Navy-900);
-  height: 75%;
+  height: 100%;
   border-radius: var(--border-rad);
   margin-top: 2.3rem;
   z-index: 2;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
+
+.details-name-ellipses, .hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ellipses {
+  height: 0.25rem;
+}
+
+.hours {
+  & .current {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+
+  & .previous {
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--Navy-200)
+  }
+}
+
 
 #work {
   background-color: var(--Orange-300);
@@ -138,5 +171,11 @@ body {
 
 #self-care {
   background-color: var(--Yellow-300);
+  margin-bottom: 1rem;
+}
+
+.attribution {
+  font-size: .7rem;
+  text-align: center;
   margin-bottom: 1rem;
 }

@@ -28,7 +28,7 @@
     />
 
     <link href="./styles.css" rel="stylesheet" />
-
+    <script type="text/javascript" src="./index.js" defer></script>
     <title>Time tracking dashboard</title>
   </head>
   <body>
@@ -46,112 +46,120 @@
           </section>
         </section>
         <section class="time-period">
-          <h5>Daily</h5>
-          <h5>Weekly</h5>
-          <h5>Monthly</h5>
+          <button class="time-period-button" id="daily">Daily</button>
+          <button class="time-period-button" id="weekly">Weekly</button>
+          <button class="time-period-button" id="monthly">Monthly</button>
         </section>
       </section>
 
       <section id="work" class="category">
-        <img class="work-icon" src="./images/icon-work.svg" alt="" />
+        <img
+          class="category-icon"
+          src="./images/icon-work.svg"
+          alt="an icon of workbox"
+        />
         <section class="details">
-          Work 5hrs
-          <!-- daily -->
-          Previous - 7hrs
-          <!-- daily -->
-          32hrs
-          <!-- weekly -->
-          Previous - 36hrs
-          <!-- weekly -->
-          103hrs
-          <!-- monthly -->
-          Previous - 128hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
       <section id="play" class="category">
-        <img class="play-icon" src="./images/icon-play.svg" alt="" />
+        <img
+          class="category-icon"
+          src="./images/icon-play.svg"
+          alt="an icon of games console controller"
+        />
         <section class="details">
-          Play 1hr
-          <!-- daily -->
-          Previous - 2hrs
-          <!-- daily -->
-          10hrs
-          <!-- weekly -->
-          Previous - 8hrs
-          <!-- weekly -->
-          23hrs
-          <!-- monthly -->
-          Previous - 29hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
       <section id="study" class="category">
-        <img class="study-icon" src="./images/icon-study.svg" alt="" />
+        <img class="category-icon" src="./images/icon-study.svg" alt="" />
         <section class="details">
-          Study 0hrs
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          4hrs
-          <!-- weekly -->
-          Previous - 7hrs
-          <!-- weekly -->
-          13hrs
-          <!-- monthly -->
-          Previous - 19hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
       <section id="exercise" class="category">
-        <img class="exercise-icon" src="./images/icon-exercise.svg" alt="" />
+        <img class="category-icon" src="./images/icon-exercise.svg" alt="" />
         <section class="details">
-          Exercise 1hr
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          4hrs
-          <!-- weekly -->
-          Previous - 5hrs
-          <!-- weekly -->
-          11hrs
-          <!-- monthly -->
-          Previous - 18hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
       <section id="social" class="category">
-        <img class="social-icon" src="./images/icon-social.svg" alt="" />
+        <img class="category-icon" src="./images/icon-social.svg" alt="" />
         <section class="details">
-          Social 1hr
-          <!-- daily -->
-          Previous - 3hrs
-          <!-- daily -->
-          5hrs
-          <!-- weekly -->
-          Previous - 10hrs
-          <!-- weekly -->
-          21hrs
-          <!-- monthly -->
-          Previous - 23hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
       <section id="self-care" class="category">
-        <img class="self-care-icon" src="./images/icon-self-care.svg" alt="" />
+        <img class="category-icon" src="./images/icon-self-care.svg" alt="" />
         <section class="details">
-          Self Care 0hrs
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          2hrs
-          <!-- weekly -->
-          Previous - 2hrs
-          <!-- weekly -->
-          7hrs
-          <!-- monthly -->
-          Previous - 11hrs
-          <!-- monthly -->
+          <section class="details-name-ellipses">
+            <h5>Work</h5>
+          <img
+            class="ellipses"
+            src="./images/icon-ellipsis.svg"
+            alt="an icon of ellipses"
+          />
+          </section>
+          <section class="hours">
+            <p class="current" id="current">5hrs</p>
+            <p class="previous" id="previous">Yesterday - 7hrs</p>
+          </section>
         </section>
       </section>
 
@@ -159,7 +167,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">John Gorman</a>.
       </div>
     </main>
   </body>
