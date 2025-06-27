@@ -1,13 +1,16 @@
 const timePeriodBtns = document.getElementsByClassName("time-period-button");
+const currentValues = document.getElementsByClassName("current");
+const previousValues = document.getElementsByClassName("previous");
 const daily = document.getElementById("daily");
 let dataArray;
 
+// function fetches data and assigns it to dataArray variable 
+// I then calls dataFilter function to set the initial data as the daily stats
 function fetchData() {
   fetch("./data.json")
     .then((res) => res.json())
     .then((data) => {
       dataArray = data;
-      console.log("dataArray:", dataArray);
     })
     .catch((err) => console.error(err));
 }
@@ -21,21 +24,36 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 //  function to switch text color of buttons
 function timePeriodHighlight(timeSpan) {
-  console.log("timeSpan", timeSpan);
   for (btn of timePeriodBtns) {
     btn.style.color = "hsl(235, 45%, 61%)";
   }
   let activeBtn = document.getElementById(timeSpan);
-  console.log("activeBtn", activeBtn);
   activeBtn.style.color = "white";
 }
 
 function dataFilter(data) {
-   
+  let amountsArr = [];
+  let contextObj = {
+    daily: "Yesterday",
+    weekly: "Last Week",
+    monthly: "Last Month",
+  };
   for (obj of dataArray) {
-    console.log(obj["timeframes"][data]);
+    amountsArr.push(obj["timeframes"][data]);
   }
-  console.log("data", data);
+
+  for (let i = 0; i < currentValues.length; i++) {
+    currentValues[i].innerText = 
+      amountsArr[i].current === 1
+        ? `${amountsArr[i].current}hr`
+        : `${amountsArr[i].current}hrs`;
+
+
+    previousValues[i].innerText =
+      amountsArr[i].previous === 1
+        ? `${contextObj[data]} - ${amountsArr[i].previous}hr`
+        : `${contextObj[data]} - ${amountsArr[i].previous}hrs`;
+  }
 }
 
 function switchTimeData(e) {
@@ -47,4 +65,3 @@ function switchTimeData(e) {
 for (btn of timePeriodBtns) {
   btn.addEventListener("click", switchTimeData);
 }
-console.log("dataArray", dataArray);
