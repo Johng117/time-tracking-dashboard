@@ -96,6 +96,7 @@ body {
       border: none;
       font-size: 0.8rem;
     }
+    
   }
 }
 
@@ -154,7 +155,6 @@ body {
 
 #work {
   background-color: var(--Orange-300);
-  
 }
 
 #play {
@@ -183,17 +183,16 @@ body {
   margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 58rem) {
+@media only screen and (min-width: 64rem) {
   #main-container {
     margin: 20vh auto;
     width: 55rem;
-    height: 25rem;
+    height: 26rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.4rem;
   }
-
 
   .category {
     margin: 0;
@@ -206,10 +205,44 @@ body {
     grid-column-start: 1;
     grid-column-end: 2;
     height: auto;
-  }
 
-  .details {
-    height: 9.7rem;
+    & .picture-name {
+      flex-direction: column;
+
+      & .image-jeremy {
+        margin-top: 1.5rem;
+        align-self: flex-start;
+        height: 4rem;
+      }
+
+      & .name {
+        margin-top: 2rem;
+        padding: 0;
+        line-height: 1.2;
+
+        & p {
+          font-size: 0.7rem;
+          font-weight: 300;
+        }
+
+        & h1 {
+          z-index: 0;
+          font-weight: 400;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    & .time-period {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      & button:hover {
+        cursor: pointer;
+        color:white !important; 
+      }
+    }
   }
 
   #work {
@@ -218,35 +251,35 @@ body {
     grid-column-start: 2;
     grid-column-end: 3;
   }
-  
+
   #play {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 4;
   }
-  
+
   #study {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 5;
   }
-  
+
   #exercise {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 3;
   }
-  
+
   #social {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 3;
     grid-column-end: 4;
   }
-  
+
   #self-care {
     grid-row-start: 3;
     grid-row-end: 5;
@@ -254,4 +287,30 @@ body {
     grid-column-end: 5;
   }
 
+  .details {
+    height: 10.1rem;
+  }
+
+  .details:hover {
+    cursor: pointer;
+    background-color: hsl(235, 46%, 40%);;
+  }
+  
+  .hours {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & .current {
+      margin-top: 0.7rem;
+      font-size: 2.6rem;
+      font-weight: 300;
+    }
+
+    & .previous {
+      margin-top: 0.7rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--Navy-200);
+    }
+  }
 }

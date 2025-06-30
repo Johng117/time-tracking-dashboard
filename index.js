@@ -4,7 +4,7 @@ const previousValues = document.getElementsByClassName("previous");
 const daily = document.getElementById("daily");
 let dataArray;
 
-// function fetches data and assigns it to dataArray variable 
+// function fetches data and assigns it to dataArray variable
 function fetchData() {
   fetch("./data.json")
     .then((res) => res.json())
@@ -30,6 +30,8 @@ function timePeriodHighlight(timeSpan) {
   activeBtn.style.color = "white";
 }
 
+// TODO use toggle classlist above to persist hover state
+
 function dataFilter(data) {
   let amountsArr = [];
   let contextObj = {
@@ -42,11 +44,10 @@ function dataFilter(data) {
   }
 
   for (let i = 0; i < currentValues.length; i++) {
-    currentValues[i].innerText = 
+    currentValues[i].innerText =
       amountsArr[i].current === 1
         ? `${amountsArr[i].current}hr`
         : `${amountsArr[i].current}hrs`;
-
 
     previousValues[i].innerText =
       amountsArr[i].previous === 1
@@ -64,3 +65,4 @@ function switchTimeData(e) {
 for (btn of timePeriodBtns) {
   btn.addEventListener("click", switchTimeData);
 }
+
