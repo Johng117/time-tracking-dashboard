@@ -43,7 +43,6 @@ body {
 
 #main-container {
   margin: 4rem 1rem;
-  
 }
 
 .picture-name-time {
@@ -68,7 +67,7 @@ body {
     }
 
     & .name {
-      padding-left: .7rem;
+      padding-left: 0.7rem;
       line-height: 1.3;
       & p {
         font-size: 0.8rem;
@@ -119,7 +118,7 @@ body {
 
 .details {
   background-color: var(--Navy-900);
-  height: 100%;
+  height: 6.6rem;
   border-radius: var(--border-rad);
   margin-top: 2.3rem;
   z-index: 2;
@@ -155,6 +154,7 @@ body {
 
 #work {
   background-color: var(--Orange-300);
+  
 }
 
 #play {
@@ -175,11 +175,83 @@ body {
 
 #self-care {
   background-color: var(--Yellow-300);
-  margin-bottom: 1rem;
 }
 
 .attribution {
   font-size: 0.7rem;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 58rem) {
+  #main-container {
+    margin: 20vh auto;
+    width: 55rem;
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+
+  .category {
+    margin: 0;
+    height: auto;
+  }
+
+  .picture-name-time {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: auto;
+  }
+
+  .details {
+    height: 9.7rem;
+  }
+
+  #work {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  
+  #play {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  
+  #study {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  
+  #exercise {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  
+  #social {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  
+  #self-care {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
 }

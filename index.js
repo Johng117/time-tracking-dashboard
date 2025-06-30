@@ -5,7 +5,6 @@ const daily = document.getElementById("daily");
 let dataArray;
 
 // function fetches data and assigns it to dataArray variable 
-// I then calls dataFilter function to set the initial data as the daily stats
 function fetchData() {
   fetch("./data.json")
     .then((res) => res.json())
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   fetchData();
 });
 
-//  function to switch text color of buttons
+// function to switch text color of buttons
 function timePeriodHighlight(timeSpan) {
   for (btn of timePeriodBtns) {
     btn.style.color = "hsl(235, 45%, 61%)";
